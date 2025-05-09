@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#B3E2D3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2D8C99"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/extrabold"
+        android:text="DiaryTravel"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarMain"
+        app:layout_constraintStart_toStartOf="@+id/toolbarMain"
+        app:layout_constraintTop_toTopOf="@+id/toolbarMain" />
+
+    <ImageButton
+        android:id="@+id/btnIrParaPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#2D8C99"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarMain"
+        app:srcCompat="@drawable/profile"
+        android:contentDescription="Ir para o perfil"
+        android:minWidth="48dp"
+        android:minHeight="48dp" />
+
+    <ImageButton
+        android:id="@+id/btnMenuLateral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#2D8C99"
+        app:srcCompat="@drawable/menu"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="Abrir menu lateral"
+        android:minWidth="48dp"
+        android:minHeight="48dp" />
+
+    <FrameLayout
+        android:id="@+id/containerMenuLateral"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain">
+    </FrameLayout>
+
+    <!-- ScrollView com conteúdo de texto -->
+    <ScrollView
+        android:id="@+id/scrollViewConteudo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewViagens"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/containerMenuLateral"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/viagens_favoritas"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF3E0"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/roma_1_semana_3_locais"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/paris_5_dias_2_locais"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <!-- Estatísticas -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/estatistica"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF3E0"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/viagens_12"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/continente_mais_visitado_europa"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/lugar_favorito_italia"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- RecyclerView adicionado -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewViagens"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Lista de viagens"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/containerMenuLateral"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewConteudo"
+        tools:listitem="@layout/viagensview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

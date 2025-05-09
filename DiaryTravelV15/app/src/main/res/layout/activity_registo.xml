@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#b3e2d3">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2d8c99"
+        android:padding="16dp"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/extrabold"
+            android:text="@string/criar_conta"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            android:layout_gravity="center" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Conteúdo -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="@string/nome_completo"
+                android:textSize="17sp"
+                android:layout_marginTop="24dp" />
+
+            <EditText
+                android:id="@+id/etNome"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:fontFamily="@font/regular"
+                android:hint="@string/nome_ins"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="@string/email"
+                android:textSize="17sp"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/etRegistroEmail"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:fontFamily="@font/regular"
+                android:hint="@string/email_ins"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="@string/palavra_passe"
+                android:textSize="17sp"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/etRegistroSenha"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:fontFamily="@font/regular"
+                android:hint="@string/palavra_passe_ins"
+                android:inputType="textPassword" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="@string/palavra_passe_confi"
+                android:textSize="17sp"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/etConfirmarSenha"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#FFFFFF"
+                android:fontFamily="@font/regular"
+                android:hint="@string/palavra_passe_confi"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:padding="12dp"
+                android:fontFamily="@font/regular"
+                android:text="@string/criar_uma_conta"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:backgroundTint="@color/button1" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIrParaLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:padding="12dp"
+                android:fontFamily="@font/regular"
+                android:text="@string/cancelar"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:backgroundTint="@color/button1" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b3e2d3"
+    android:orientation="vertical">
+
+    <!-- Toolbar com texto centralizado -->
+<androidx.appcompat.widget.Toolbar
+android:id="@+id/toolbar"
+android:layout_width="match_parent"
+android:layout_height="200dp"
+android:background="#2d8c99"
+android:elevation="4dp">
+
+<TextView
+    android:id="@+id/toolbarTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:fontFamily="@font/extrabold"
+    android:text="@string/app_name"
+    android:textColor="@android:color/white"
+    android:textSize="26sp" />
+</androidx.appcompat.widget.Toolbar>
+
+    <!-- Conteúdo da tela -->
+<ScrollView
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1"
+android:fillViewport="true"
+android:background="#b3e2d3">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50sp"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Campo Email -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/regular"
+        android:text="@string/email"
+        android:textColor="#000000"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/etLoginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/regular"
+        android:hint="@string/email_ins"
+        android:inputType="textEmailAddress"
+        android:padding="10dp" />
+
+    <!-- Campo Palavra-passe -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/regular"
+        android:text="@string/palavra_passe"
+        android:textColor="#000000"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/etLoginSenha"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@android:drawable/edit_text"
+        android:fontFamily="@font/regular"
+        android:hint="@string/palavra_passe_ins"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <!-- Link para Registro -->
+    <TextView
+        android:id="@+id/tvIrParaRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/regular"
+        android:text="@string/criar_conta"
+        android:textColor="#2d8c99"
+        android:textStyle="bold" />
+
+    <!-- Botão de Entrar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEntrar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:fontFamily="@font/regular"
+        android:text="@string/entrar"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/button1"
+        android:textSize="16sp" />
+</LinearLayout>
+</ScrollView>
+    </LinearLayout>

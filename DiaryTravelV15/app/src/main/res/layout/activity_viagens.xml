@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#B3E2D3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Viagens">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2D8C99"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/extrabold"
+                android:text="DiaryTravel"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnIrParaPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2D8C99"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:contentDescription="Ir para o perfil"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/profile" />
+
+            <ImageButton
+                android:id="@+id/btnMenuLateral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2D8C99"
+                android:elevation="8dp"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:contentDescription="Abrir menu lateral"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/containerMenuLateral"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain">
+
+
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddViagem"
+        android:layout_width="70dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="33dp"
+        android:backgroundTint="@color/button2"
+        android:fontFamily="@font/regular"
+        android:text="+"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:backgroundTint="#145A64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewViagens"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Lista de viagens"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddViagem"
+        tools:listitem="@layout/viagensview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
